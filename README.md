@@ -1,2 +1,1 @@
-# 14_tech-blog
-NU Coding Bootcamp: Challenge 14
+# Willy B's Tech Blog
