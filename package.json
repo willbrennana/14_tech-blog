@@ -1,0 +1,21 @@
+{
+  "name": "14_tech-blog",
+  "version": "1.0.0",
+  "description": "NU Coding Bootcamp: Challenge 14",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willbrennana/14_tech-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willbrennana/14_tech-blog/issues"
+  },
+  "homepage": "https://github.com/willbrennana/14_tech-blog#readme"
+}
