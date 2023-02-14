@@ -9,17 +9,23 @@
   <div class="flex-column justify-space-around min-100-vh">
     <header class="flex-column">
      <nav class="display-flex justify-space-between align-center p-2">
-      <a href="">HOME</a>
-      <a href="">DASHBOARD</a>
+      <a href="/">HOME</a>
+      <a href="/dashboard">DASHBOARD</a>
       {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
+    <button id="logout" class="btn-no-style">LOGOUT</button>
     {{else}}
-    <a href="/login">Login</a>
+    <a href="/login">LOGIN</a>
     {{/if}}
      </nav>
+     {{#if loggedIn}}
       <h1 class="p-2">
-        Tech Blog
+        MY DASHBOARD
       </h1>
+      {{else}}
+      <h1 class="p-2">
+        TECH TALKS
+      </h1>
+       {{/if}}
     </header>
       <main class="container container-fluid mt-5 flex-grow-1">
         {{{ body }}}
