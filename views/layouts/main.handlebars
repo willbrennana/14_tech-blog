@@ -11,22 +11,15 @@
      <nav class="display-flex justify-space-between align-center p-2">
       <a href="/">HOME</a>
       <a href="/dashboard">DASHBOARD</a>
-      <a href="/my-posts">MY POSTS</a>
       {{#if loggedIn}}
     <button id="logout" class="btn-no-style">LOGOUT</button>
     {{else}}
     <a href="/login">LOGIN</a>
     {{/if}}
      </nav>
-     {{#if loggedIn}}
-      <h1 class="p-2">
-        MY DASHBOARD
-      </h1>
-      {{else}}
       <h1 class="p-2">
         TECH TALKS
       </h1>
-       {{/if}}
     </header>
       <main class="container container-fluid mt-5 flex-grow-1">
         {{{ body }}}
