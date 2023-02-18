@@ -1,15 +1,14 @@
 const router = require("express").Router();
-const Comment = require("../../models/Comment");
-const withAuth = require("../../utils/auth");
+const { Comment, User, Post } = require("../../models/");
 
-router.post("/", withAuth, async (req, res) => {
+router.post("/", async (req, res) => {
   try {
-    const newComment = await Comment.create({
-      ...req.body,
+    const commentData = await Comment.create({
+      comment: req.body.comment,
       user_id: req.session.user_id,
       post_id: req.body.post_id,
     });
-    res.status(200).json(newComment);
+    res.status(200).json(commentData);
   } catch (err) {
     res.status(400).json(err);
   }

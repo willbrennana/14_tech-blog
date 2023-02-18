@@ -8,24 +8,30 @@
 <body>
   <div class="flex-column justify-space-around min-100-vh">
     <header class="flex-column">
-     <nav class="display-flex justify-space-between align-center p-2">
-      <a href="/">HOME</a>
-      <a href="/dashboard">DASHBOARD</a>
+     <nav class="display-flex align-center p-2">
+      <a href="/" class="header-links">HOME</a>
+      <a href="/dashboard" class="header-links">DASHBOARD</a>
       {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">LOGOUT</button>
+    <a id="logout" class="header-links">LOGOUT</a>
     {{else}}
-    <a href="/login">LOGIN</a>
+    <a href="/login" class="header-links">LOGIN</a>
     {{/if}}
      </nav>
-      <h1 class="p-2">
-        TECH TALKS
+     {{#if loggedIn}}
+      <h1 class="title">
+        YOUR DASHBOARD
       </h1>
+      {{else}}
+      <h1 class="title">
+        TECH BLOG
+      </h1>
+      {{/if}}
     </header>
-      <main class="container container-fluid mt-5 flex-grow-1">
+      <main class="container container-fluid mt-5" id="mainBody">
         {{{ body }}}
       </main>
       <footer>
-        <p>Built by Willy B</p>
+        <p>BUILT BY WILLY B</p>
       </footer>
   </div>
   {{#if loggedIn}}
