@@ -1,7 +1,7 @@
 :root {
-    --primary: #389393;
-    --secondary: #f5a25d;
-    --tertiary: #fa7f72;
+    --primary: #20FC8F;
+    --secondary: black;
+    --tertiary: fuchsia;
     --quatrinary: #6c6b67;
     --light: #ebebeb;
     --dark: #182c23;
@@ -16,7 +16,7 @@
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
-    background-color: var(--quatrinary);
+    background-color: var(--light);
   }
   
   header {
@@ -29,6 +29,7 @@
   
   main {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     flex-grow: 1;
   }
@@ -42,10 +43,26 @@
   }
   
   nav {
-    display: flex;
     background-color: var(--secondary);
+    display: flex;
   }
   
+  .header-links {
+padding-right: 20px;
+color: var(--tertiary);
+  }
+
+  .title {
+    padding-top: 20px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: center;
+  }
+
   .menu-container {
     display: flex;
     flex-wrap: wrap;
@@ -97,19 +114,32 @@
     background-color: var(--tertiary);
   }
   
+  .user-post {
+    color: black;
+    margin-bottom: 1rem;
+    background-color: var(--primary);
+    padding: 0.625rem;
+    border: 3px solid var(--secondary);
+    border-radius: var(--border-radius);
+    border-style: solid;
+    border-width: medium;
+    width: 100%;
+  
+  }
+
   /* CARDS */
-  .dish-card {
+  .post-card {
     margin: 20px;
-    flex: 0 1 300px;
+    flex: 0 2 300px;
     padding: 5px;
     width: 35%;
-    min-height: 100%;
-    min-width: 35%;
+    min-height: 20%;
+    min-width: 100%;
     border: 3px solid var(--primary);
     border-radius: var(--border-radius);
     border-style: solid;
     border-width: medium;
-    background-color: var(--light);
+    background-color: var(--primary);
     color: var(--dark);
   }
   
@@ -125,8 +155,9 @@
     color: var(--dark);
   }
   
-  .card-header {
+  .post-header {
     color: var(--light);
+    flex-direction: column;
     margin: 0;
     background-color: var(--secondary);
     padding: 0.625rem;
@@ -143,23 +174,18 @@
   .dish-card-header {
     font-size: 1.5rem;
     color: var(--tertiary);
-    margin: 0;
+    margin: 2;
     background-color: var(--light);
     padding: 0.625rem;
     border-bottom-style: solid;
   }
   
-  .card-body {
+  .post-body {
     padding: 2.5%;
     font-size: 1.4rem;
+  }
+
+  .footer {
     text-align: center;
+    padding: 2.5%;
   }
-  
-  /* LAYOUT */
-  .container {
-    display: flex;
-    flex-flow: column wrap;
-    align-content: flex-start;
-    align-items: center;
-  }
-  

@@ -1,13 +1,18 @@
+<div class="container">
 {{#each posts as |post|}}
     <div class="m-auto col-md-12 post-card" data-id="{{post.id}}">
       <div class='display-flex justify-space-between p-3 post-header' data-id="{{post.id}}"> 
-        <p class="post-header-text" data-id="{{post.id}}">{{uppercase post.title}}</p>
-        <p class="post-body-text" data-id="{{post.id}}">POSTED BY: {{uppercase post.user.username}} ON {{format_date post.createdAt}}</p>
+        <p class="post-header-text" data-id="{{post.id}}">{{post.title}}</p>
+        <p class="post-body-text" data-id="{{post.id}}">Posted by {{post.user.username}} on {{format_date post.createdAt}}</p>
       </div>
       <div class='post-body' data-id="{{post.id}}">
-        <p class="post-body-text" data-id="{{post.id}}">{{uppercase post.body}}</p>
+        <p class="post-body-text" data-id="{{post.id}}">{{post.body}}</p>
       </div>
     </div>
 {{/each}}
+<footer class="footer">
+        <a href="https://github.com/willbrennana">Built by Willy B</a>
+      </footer>
+</div>
 
 <script src="./js/viewall.js"></script>

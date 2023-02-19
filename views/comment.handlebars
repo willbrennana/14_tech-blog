@@ -1,22 +1,22 @@
-<div class="m-auto col-md-12 post-card" data-id="{{post.id}}" id="postId">
+<div class="display-flex flex-column m-auto col-md-12 post-card" data-id="{{post.id}}" id="postId">
     <div class='display-flex justify-space-between p-3 post-header'> 
-        <p class="post-header-text">{{uppercase post.title}}</p>
-        <p class="post-body-text">POSTED BY: {{uppercase post.user.username}} ON {{format_date post.createdAt}}</p>
+        <p class="post-header-text">{{post.title}}</p>
+        <p class="post-body-text">Posted by {{post.user.username}} on {{format_date post.createdAt}}</p>
     </div>
     <div class='post-body'>
-        <p class="post-body-text">{{uppercase post.body}}</p>
+        <p class="post-body-text">{{post.body}}</p>
     </div>
     <div class="display-flex flex-column m-2 card">
-        <div>
-            <h2 class="text-center text-primary">COMMENTS</h2>
+        <div class="m-3">
+            <h2 class="text-center text-secondary">COMMENTS</h2>
             {{#if loggedIn}}
-            <button id="commentCreateBtn">CREATE NEW COMMENT</button>
+            <button class=" btn btn-primary" id="commentCreateBtn">Add a Comment</button>
             {{/if}}
         </div>
         {{#each post.comments as |comment|}} 
             <div class="display-flex flex-column p-2 m-1 bg-light">
                 <div class="display-flex p-2 m-1 bg-primary text-light justify-space-between">
-                    <div>{{uppercase comment.user.username}}</div>
+                    <div>{{comment.user.username}}</div>
                     <div>{{format_date_time comment.createdAt}}</div>
                 </div>
                 <div class="m-2 p-2 bg-white">{{comment.comment}}</div>

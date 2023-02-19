@@ -24,7 +24,7 @@ async function postDelete(event) {
   if (response.ok) {
     document.location.replace("/dashboard");
   } else {
-    alert("DELETE FAILED");
+    alert("Delete Failed");
   }
 }
 

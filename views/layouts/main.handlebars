@@ -1,6 +1,6 @@
 <head>
   <meta charset="UTF-8">
-  <title>Tech Blog</title>
+  <title>Tech Talks Blog</title>
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -9,29 +9,35 @@
   <div class="flex-column justify-space-around min-100-vh">
     <header class="flex-column">
      <nav class="display-flex align-center p-2">
-      <a href="/" class="header-links">HOME</a>
-      <a href="/dashboard" class="header-links">DASHBOARD</a>
+      <a href="/" class="header-links">Home</a>
+      <a href="/dashboard" class="header-links">Dashboard</a>
       {{#if loggedIn}}
-    <a id="logout" class="header-links">LOGOUT</a>
+    <a id="logout" class="header-links">Logout</a>
     {{else}}
-    <a href="/login" class="header-links">LOGIN</a>
+    <a href="/login" class="header-links">Login</a>
     {{/if}}
      </nav>
      {{#if loggedIn}}
       <h1 class="title">
-        YOUR DASHBOARD
+        TECH TALKS
       </h1>
+      <h4>
+        where small ideas make big strides
+      </h4>
       {{else}}
       <h1 class="title">
-        TECH BLOG
+        TECH TALKS
       </h1>
+      <h4>
+        where small ideas make big strides
+      </h4>
       {{/if}}
     </header>
-      <main class="container container-fluid mt-5" id="mainBody">
+      <main class="container" id="mainBody">
         {{{ body }}}
       </main>
-      <footer>
-        <p>BUILT BY WILLY B</p>
+      <footer class="footer">
+        <a href="https://github.com/willbrennana">Built by Willy B</a>
       </footer>
   </div>
   {{#if loggedIn}}

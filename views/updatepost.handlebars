@@ -1,27 +1,30 @@
+<main class="container p-5 align-center" id="mainBody">
       <div class='display-flex justify-space-between p-3 mb-3 user-post' data-id="{{post.id}}"> 
-        <p class="post-header-text">{{uppercase post.title}}</p>
+        <p class="post-header-text">{{post.title}}</p>
         <p class="post-body-text">{{format_date post.createdAt}}</p>
       </div>
-<div class="display-flex justify-space-between p-3 mb-3 post-body flex-column ">
-    <div class="col-10 m-auto">
-        <div class="user-post">
+<div class="display-flex justify-space-between p-3 mb-3 user-post flex-column ">
+    <div>
+        <div>
             <h2 class="page-title" id="postId" data-id="{{post.id}}">UPDATE POST</h2>
         <form class="form create-post-form">
             <div class="form-group">
-                <label for="post-title">TITLE:</label>
+                <label for="post-title">New Title</label>
                 <input class="form-input" type="text" id="title" value="{{post.title}}"/>
             </div>
             <div class="form-group">
-                <label for="body">CONTENT:</label>
+                <label for="body">New Content</label>
                 <input class="form-input" id="body" value="{{post.body}}" />
             </div>
-            <div class="form-group text-center display-flex flex-column gap-2">
-                <button class="btn btn-primary" type="submit" id="postUpdate">UPDATE</button>
-                <button class="btn btn-primary" type="submit" id="postDelete">DELETE</button>
-
+            <div class="form-group text-center">
+                <button class="btn btn-primary" type="submit" id="postUpdate">Update</button>
+            </div>
+            <div class="form-group text-center">
+                <button class="btn btn-secondary" type="submit" id="postDelete">Delete</button>
             </div>
         </form>
         </div>
     </div>
 </div>
+</main>
 <script src="./js/post-update.js>
