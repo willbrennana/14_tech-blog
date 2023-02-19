@@ -1,22 +1,22 @@
 <div class="m-auto col-md-12 post-card" data-id="{{post.id}}" id="postId">
     <div class='display-flex justify-space-between p-3 post-header'> 
         <p class="post-header-text">{{post.title}}</p>
-        <p class="post-body-text">POSTED BY: {{post.user.username}} ON {{format_date post.createdAt}}</p>
+        <p class="post-body-text">Posted by {{post.user.username}} on {{format_date post.createdAt}}</p>
     </div>
     <div class='post-body'>
         <p class="post-body-text">{{post.body}}</p>
     </div>
     <div class="display-flex flex-column m-2 p-2 card">
         <div>
-            <h2 class="text-center text-primary">ADD COMMENT</h2>
+            <h2 class="text-center">Join the Convo</h2>
         </div>
         <form class="form login-form ">
       <div class="form-group">
-        <label for="comment">COMMENT:</label>
+        <label for="comment">What's your take?</label>
         <input class="form-input" type="text" id="comment" />
       </div>
       <div class="form-group">
-        <button class="btn btn-primary" type="submit" id="commentShareBtn">SUBMIT COMMENT</button>
+        <button class="btn btn-primary" type="submit" id="commentShareBtn">Share</button>
       </div>
     </form>
         {{#each post.comments as |comment|}} 
@@ -31,4 +31,4 @@
     </div>
 </div>
 
-<script src="./js/comment-share.js"></script>
+<script src="./../js/comment-share.js"></script>

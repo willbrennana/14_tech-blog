@@ -1,4 +1,5 @@
-<div class="display-flex flex-column m-auto col-md-12 post-card" data-id="{{post.id}}" id="postId">
+<div class="container">
+<div class="m-auto col-md-12 post-card" data-id="{{post.id}}" id="postId">
     <div class='display-flex justify-space-between p-3 post-header'> 
         <p class="post-header-text">{{post.title}}</p>
         <p class="post-body-text">Posted by {{post.user.username}} on {{format_date post.createdAt}}</p>
@@ -6,23 +7,29 @@
     <div class='post-body'>
         <p class="post-body-text">{{post.body}}</p>
     </div>
-    <div class="display-flex flex-column m-2 card">
-        <div class="m-3">
-            <h2 class="text-center text-secondary">COMMENTS</h2>
-            {{#if loggedIn}}
-            <button class=" btn btn-primary" id="commentCreateBtn">Add a Comment</button>
-            {{/if}}
+    <div class="p-4">
+    <div class="display-flex flex-column p-5 m-2">
+        <div class="m-2">
+            <h2 class="text-center">JOIN THE CONVO</h2>
         </div>
+        <div>
         {{#each post.comments as |comment|}} 
             <div class="display-flex flex-column p-2 m-1 bg-light">
-                <div class="display-flex p-2 m-1 bg-primary text-light justify-space-between">
+                <div class="display-flex p-2 m-1 justify-space-between">
                     <div>{{comment.user.username}}</div>
                     <div>{{format_date_time comment.createdAt}}</div>
                 </div>
                 <div class="m-2 p-2 bg-white">{{comment.comment}}</div>
             </div>
         {{/each}}
+        </div>
+        <div>
+        {{#if loggedIn}}
+            <button class=" btn btn-primary" id="commentCreateBtn">Share Your Thoughts</button>
+            {{/if}}
+    </div>
     </div>
 </div>
+</div>
 
-<script src="./js/comment.js"></script>
+<script src="./../js/comment.js"></script>

@@ -12,7 +12,7 @@ async function postUpdate(event) {
   if (response.ok) {
     document.location.replace("/dashboard");
   } else {
-    alert("Update Failed");
+    alert("Update failed.");
   }
 }
 
@@ -24,7 +24,7 @@ async function postDelete(event) {
   if (response.ok) {
     document.location.replace("/dashboard");
   } else {
-    alert("Delete Failed");
+    alert("Delete failed.");
   }
 }
 

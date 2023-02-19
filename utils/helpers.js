@@ -13,6 +13,6 @@ module.exports = {
     const day = date.toLocaleDateString("en-US", { day: "numeric" });
     const year = date.toLocaleDateString("en-US", { year: "numeric" });
     const time = date.toLocaleTimeString("en-US");
-    return `${month} ${day}, ${year} AT ${time}`;
+    return `${month} ${day}, ${year} at ${time}`;
   },
 };
