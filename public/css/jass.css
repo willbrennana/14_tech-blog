@@ -1011,6 +1011,7 @@
   .btn.btn-primary {
     background-color: black;
     color: fuchsia;
+    margin-top: 20px;
   }
   
   .btn.btn-primary:hover {
