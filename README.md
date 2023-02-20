@@ -44,4 +44,4 @@ Below is a screenshot of my latest and greatest:
 
 ![](./ProjectScreenshot.png)
 
-To visit Willy B's Tech Talks Blog, click [here]().
+To visit Willy B's Tech Talks Blog, click [here](https://willybtechtalks.herokuapp.com/).
