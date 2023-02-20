@@ -8,7 +8,9 @@
         <p>{{post.body}}</p>
     </div>
     <div class="comments display-flex flex-column p-5 m-2">
+        {{#if loggedIn}}
             <h2 class="text-center">Join the Convo</h2>
+               {{/if}}
         <div>
         {{#each post.comments as |comment|}} 
             <div class="display-flex flex-column p-2 m-1 bg-black">

@@ -6,21 +6,21 @@
 <div class="display-flex justify-space-between p-3 mb-3 user-post flex-column ">
     <div>
         <div>
-            <h2 class="page-title" id="postId" data-id="{{post.id}}">UPDATE YOUR POST</h2>
+            <h2 class="page-title" id="postId" data-id="{{post.id}}">Let's make some updates...</h2>
         <form class="form create-post-form">
-            <div class="form-group">
-                <label for="post-title">New Title</label>
+            <div>
+                <label>What's the new title?</label>
                 <input class="form-input" type="text" id="title" value="{{post.title}}"/>
             </div>
-            <div class="form-group">
-                <label for="body">New Content</label>
+            <div>
+                <label for="body">What's the new writeup?</label>
                 <input class="form-input" id="body" value="{{post.body}}" />
             </div>
-            <div class="form-group text-center">
-                <button class="btn btn-primary" type="submit" id="postUpdate">Update</button>
+            <div class="text-center">
+                <button class="btn btn-primary" type="submit" id="postUpdate">Save Tweaks</button>
             </div>
             <div class="form-group text-center">
-                <button class="btn btn-secondary" type="submit" id="postDelete">Delete</button>
+                <button class="btn btn-secondary" type="submit" id="postDelete">This is Trash, Delete</button>
             </div>
         </form>
         </div>

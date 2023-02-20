@@ -1,14 +1,14 @@
 [
   {
     "title": "Music Near Me",
-    "body": "A mobile app for concerts near you."
+    "body": "I had this idea for a mobile app to show concerts near you and all their relevant info. You could even link your socials to tell all your friends and find out good bites to eat before or after the show."
   },
   {
-    "title": "The Tech Trainer",
-    "body": "A web app to track your programming progress."
+    "title": "The Code Connoisseur",
+    "body": "What if a web app could track and enhance your programming progress? I'm talking syntax challenges, project check-ins and reliable resources to stay in touch with folks to find out ways you can grow with a community in your corner."
   },
   {
-    "title": "Roll 'Em Up",
-    "body": "A game of challenging mazes."
+    "title": "Maze Madness",
+    "body": "Is there a game out there that creates challenging mazes based on automated decisions provided to you through some sort of algorithm? Maybe I'm using the wrong language, but you get the idea."
   }
 ]
