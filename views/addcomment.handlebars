@@ -1,27 +1,24 @@
 <div class="m-auto col-md-12 post-card" data-id="{{post.id}}" id="postId">
     <div class='display-flex justify-space-between p-3 post-header'> 
-        <p class="post-header-text">{{post.title}}</p>
-        <p class="post-body-text">Posted by {{post.user.username}} on {{format_date post.createdAt}}</p>
+        <p>{{post.title}}</p>
+        <p>Posted by {{post.user.username}} on {{format_date post.createdAt}}</p>
     </div>
     <div class='post-body'>
-        <p class="post-body-text">{{post.body}}</p>
+        <p>{{post.body}}</p>
     </div>
-    <div class="display-flex flex-column m-2 p-2 card">
-        <div>
-            <h2 class="text-center">Join the Convo</h2>
-        </div>
-        <form class="form login-form ">
-      <div class="form-group">
-        <label for="comment">What's your take?</label>
+    <div class="comments">
+        <h2 class="text-center">What's Your Take?</h2>
+        <form class="form">
+      <div>
         <input class="form-input" type="text" id="comment" />
       </div>
-      <div class="form-group">
+      <div class="text-center">
         <button class="btn btn-primary" type="submit" id="commentShareBtn">Share</button>
       </div>
     </form>
         {{#each post.comments as |comment|}} 
-            <div class="display-flex flex-column p-2 m-1 bg-light">
-                <div class="display-flex p-2 m-1 bg-primary text-light justify-space-between">
+            <div class="display-flex flex-column p-2 m-1 bg-black">
+                <div class="display-flex m-1 text-white justify-space-between">
                     <div>{{comment.user.username}}</div>
                     <div>{{format_date_time comment.createdAt}}</div>
                 </div>
